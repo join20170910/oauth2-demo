@@ -1,0 +1,13 @@
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/mapper/SysUserMapper.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/impl/PermissionServiceImpl.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/impl/RoleServiceImpl.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/RoleService.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/UserApplication.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/entity/SysMenu.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/mapper/SysRoleMapper.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/impl/UserServiceImpl.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/mapper/SysMenuMapper.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/PermissionService.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/entity/SysUser.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/service/UserService.java
+/Users/apple/IdeaProjects/oauth-admin/oauth-user-api/src/main/java/com/ws/auth/user/entity/SysRole.java

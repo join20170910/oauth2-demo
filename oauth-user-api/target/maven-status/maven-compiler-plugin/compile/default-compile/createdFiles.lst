@@ -1,0 +1,13 @@
+com/ws/auth/user/UserApplication.class
+com/ws/auth/user/service/impl/UserServiceImpl.class
+com/ws/auth/user/service/impl/RoleServiceImpl.class
+com/ws/auth/user/service/impl/PermissionServiceImpl.class
+com/ws/auth/user/service/RoleService.class
+com/ws/auth/user/entity/SysRole.class
+com/ws/auth/user/mapper/SysRoleMapper.class
+com/ws/auth/user/service/UserService.class
+com/ws/auth/user/service/PermissionService.class
+com/ws/auth/user/mapper/SysMenuMapper.class
+com/ws/auth/user/entity/SysMenu.class
+com/ws/auth/user/entity/SysUser.class
+com/ws/auth/user/mapper/SysUserMapper.class

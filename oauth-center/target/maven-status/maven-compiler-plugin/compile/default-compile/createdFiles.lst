@@ -1,0 +1,12 @@
+org/springframework/security/web/authentication/ui/DefaultLogoutPageGeneratingFilter.class
+com/ws/auth/center/service/UserService.class
+com/ws/auth/center/service/impl/RoleServiceImpl.class
+com/ws/auth/center/service/RoleService.class
+com/ws/auth/center/config/Oauth2AuthServerConfig.class
+com/ws/auth/center/service/impl/UserServiceImpl.class
+com/ws/auth/center/config/Oauth2LoginoutSuccessHandler.class
+com/ws/auth/center/service/PermissionService.class
+com/ws/auth/center/service/impl/PermissionServiceImpl.class
+com/ws/auth/center/config/Oauth2WebSecurityConfig.class
+com/ws/auth/center/Oauth2AuthServer.class
+com/ws/auth/center/service/impl/UserDetailsServiceImpl.class

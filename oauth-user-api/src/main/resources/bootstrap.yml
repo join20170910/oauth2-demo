@@ -1,0 +1,9 @@
+server:
+  port: 9021
+spring:
+  application:
+    name: mss-upms
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.31.211:8848
