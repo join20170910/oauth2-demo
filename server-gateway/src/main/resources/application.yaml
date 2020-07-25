@@ -1,0 +1,51 @@
+zuul:
+  routes:
+    token:
+      url: http://auth.imooc.com:9090
+    order:
+      url: http://order.imooc.com:9080
+    price:
+      url: http://price.imooc.com:9060
+  sensitive-headers:
+# sensitive headers that are not passed to downstream requests 默认不转发
+# head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
+  ratelimit:
+    enabled: true
+    repository: jpa
+    default-policy-list:
+      - limit: 20
+        quota: 10
+        refresh-interval: 10
+        type:
+          - url
+          - httpmethod
+    policy-list:
+      token:
+      - limit: 20
+        quota: 10
+        refresh-interval: 10
+        type:
+          - url
+          - httpmethod
+spring:
+  application:
+    name: gateway
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+server:
+  port: 9070
+
+security:
+  oauth2:
+    client:
+      client-id: gateway
+      client-secret: 123456
+    resource:
+      jwt:
+        key-uri: http://auth.imooc.com:9090/oauth/token_key
