@@ -1,4 +1,4 @@
-package com.ws.auth.order;
+package com.ws.auth.order.controller;
 
 import lombok.Data;
 

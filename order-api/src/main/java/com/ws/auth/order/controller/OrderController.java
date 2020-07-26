@@ -1,4 +1,4 @@
-package com.ws.auth.order;
+package com.ws.auth.order.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;

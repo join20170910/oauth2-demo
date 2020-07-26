@@ -2,7 +2,7 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: localhost:8082
+        dashboard: 127.0.0.1:8082
         port: 8719
 security:
   oauth2:
