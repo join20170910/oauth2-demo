@@ -49,3 +49,13 @@ security:
     resource:
       jwt:
         key-uri: http://auth.imooc.com:9090/oauth/token_key
+
+
+spring:
+  # redis
+  redis:
+    host: 47.103.5.190
+    port: 6379
+    redisson:
+      # 配置单点模式
+      config: classpath:redisson-single-dev.yml
