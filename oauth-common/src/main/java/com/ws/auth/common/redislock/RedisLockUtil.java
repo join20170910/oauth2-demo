@@ -1,4 +1,4 @@
-package com.ws.auth.gateway.redislock;
+package com.ws.auth.common.redislock;
 
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;

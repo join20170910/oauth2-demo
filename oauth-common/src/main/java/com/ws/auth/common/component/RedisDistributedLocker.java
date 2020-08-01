@@ -1,6 +1,6 @@
-package com.ws.auth.gateway.comp;
+package com.ws.auth.common.component;
 
-import com.ws.auth.gateway.redislock.DistributedLocker;
+import com.ws.auth.common.redislock.DistributedLocker;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ public class RedisDistributedLocker implements DistributedLocker {
  
     @Autowired
     private RedissonClient redissonClient;
- 
+
     @Override
     public RLock lock(String lockKey) {
         RLock lock = redissonClient.getLock(lockKey);

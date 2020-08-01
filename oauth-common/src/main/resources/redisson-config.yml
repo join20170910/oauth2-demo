@@ -1,0 +1,21 @@
+clusterServersConfig:
+  idleConnectionTimeout: 1000000
+  connectTimeout: 1000000
+  timeout: 300000
+  retryAttempts: 3
+  retryInterval: 150000
+  password: "john"
+  loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> {}
+  readMode: "MASTER_SLAVE"
+  nodeAddresses:
+    - "redis://112.74.31.211:7002"
+    - "redis://112.74.31.211:7003"
+    - "redis://112.74.31.211:7004"
+    - "redis://112.74.31.211:7005"
+    - "redis://112.74.31.211:7006"
+    - "redis://112.74.31.211:7007"
+  scanInterval: 10000
+threads: 0
+nettyThreads: 0
+codec: !<org.redisson.codec.JsonJacksonCodec> {}
+transportMode: "NIO"

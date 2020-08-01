@@ -28,6 +28,7 @@
         <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
         <mybatis-plus.version>2.2.0</mybatis-plus.version>
         <tk.mybatis.starter.version>2.0.4</tk.mybatis.starter.version>
+        <apache.commons3.version>3.8.1</apache.commons3.version>
     </properties>
 
     <dependencies>
@@ -35,7 +36,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${apache.commons3.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

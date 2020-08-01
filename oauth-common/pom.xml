@@ -21,12 +21,43 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter -->
     <dependency>
         <groupId>org.redisson</groupId>
-        <artifactId>redisson-spring-boot-starter</artifactId>
+        <!-- for Spring Data Redis v.2.2.x -->
+        <artifactId>redisson-spring-data-22</artifactId>
         <version>3.13.2</version>
+    </dependency>
+    <!-- redis依赖commons-pool 这个依赖一定要添加 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-pool2</artifactId>
+    </dependency>
+    <!-- spring-boot-监控-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <!--  zookeeper 客户端 工具  分布式锁-->
+    <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-recipes</artifactId>
+        <version>4.2.0</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>test</scope>
     </dependency>
 
 </dependencies>
