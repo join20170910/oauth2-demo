@@ -7,8 +7,9 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.UUID;
 
 /**
  * @ClassName RedisTest
@@ -35,10 +36,34 @@ public class RedisTest {
     }
     @Test
     public void redisTest() {
-        // redis存储数据
-        String key = "name";
-        RLock rLock = distributedLocker.lock(key);
-        rLock.getName();
 
+        String lockKey = "lockKey";
+        RLock redissonLock = redissonClient.getLock(lockKey);
+        try{
+            redissonLock.lock();
+            System.out.println("-----------------");
+        }catch (Exception e){
+
+        }finally {
+            redissonLock.unlock();
+        }
+
+    }
+
+    @Test
+    public void distributedLockerTest(){
+
+        String lockKey = "lockKey";
+        RLock redissonLock = distributedLocker.lock(lockKey);
+
+        String keyVal = UUID.randomUUID().toString();
+        try{
+            redissonLock.lock();
+            System.out.println("------------------");
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            redissonLock.unlock();
+        }
     }
 }

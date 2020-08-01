@@ -22,8 +22,8 @@ public class ClusterServersConfig {
 
         Config config = new Config();
         config.useSingleServer()
-                .setPassword("john")
-                .setAddress("redis://112.74.31.211:7007" );
+                // .setPassword("john")
+                .setAddress("redis://127.0.0.1:6379" );
                 // use "rediss://" for SSL connection
                 //.addNodeAddress("redis://112.74.31.211:7002", "redis://112.74.31.211:7003","redis://112.74.31.211:7004")
                 //.addNodeAddress("redis://112.74.31.211:7005","redis://112.74.31.211:7006","redis://112.74.31.211:7007");
