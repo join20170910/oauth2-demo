@@ -1,32 +1,3 @@
-zuul:
-  routes:
-    token:
-      url: http://auth.imooc.com:9090
-    order:
-      url: http://order.imooc.com:9080
-    price:
-      url: http://price.imooc.com:9060
-  sensitive-headers:
-# sensitive headers that are not passed to downstream requests 默认不转发
-# head设置为空  "Cookie", "Set-Cookie", "Authorization"  转发
-  ratelimit:
-    enabled: true
-    repository: jpa
-    default-policy-list:
-      - limit: 20
-        quota: 10
-        refresh-interval: 10
-        type:
-          - url
-          - httpmethod
-    policy-list:
-      token:
-      - limit: 20
-        quota: 10
-        refresh-interval: 10
-        type:
-          - url
-          - httpmethod
 spring:
   application:
     name: gateway
@@ -39,7 +10,7 @@ spring:
     generate-ddl: true
     show-sql: true
 server:
-  port: 9070
+  port: 8099
 
 security:
   oauth2:
@@ -49,3 +20,31 @@ security:
     resource:
       jwt:
         key-uri: http://auth.imooc.com:9090/oauth/token_key
+# 聚合文档配置
+ws:
+  document:
+    resources:
+      - name: 授权模块
+        location: /ws-auth
+      - name: 工作台模块
+        location: /ws-desk
+      - name: 系统模块
+        location: /ws-system
+
+  cloud:
+    discovery:
+      reactive:
+        enabled: false
+    gateway:
+      discovery:   # spring cloud gateway 路由配置方式
+        locator: #      #路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。是否与服务发现组件进行结合，通过 serviceId(必须设置成大写) 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能
+          enabled: true
+    loadbalancer:
+      retry:
+        enabled: true
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.http.server.reactive: debug
+    org.springframework.web.reactive: debug
+    reactor.ipc.netty: debug
