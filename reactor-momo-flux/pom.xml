@@ -10,6 +10,37 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>reactor-momo-flux</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common-mono-flux</module>
+        <module>restful-mono-flux</module>
+    </modules>
+    <dependencies>
 
+     <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <scope>test</scope>
+     </dependency>
+
+     <!-- <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>io.projectreactor</groupId>
+          <artifactId>reactor-core</artifactId>
+      </dependency>
+
+      <dependency>
+          <groupId>io.projectreactor</groupId>
+          <artifactId>reactor-test</artifactId>
+      </dependency>-->
+
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+     </dependency>
+ </dependencies>
 
 </project>
